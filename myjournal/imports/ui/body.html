@@ -1,0 +1,34 @@
+<body>
+    <div class="container">
+      <header>
+        <h1>My Journal</h1>
+        <form class="new-entry">
+            <div>
+                <label style="padding-right: 46px;">Title</label>
+                <input type="text" name="title" style="width: 500px; height: 30px" required/>
+            </div>
+            <div>
+                <label style="padding-right: 44px">Date</label>
+                <input type="date" name="date" style="width: 200px; height: 30px" required/>
+            </div>
+            <div>
+                <label style="padding-right:20px">Content</label>
+                <input type="text" name="content" style="width: 500px; height: 30px" required/>
+            </div>
+            <div>
+                <label style="padding-right: 2px">Written By</label>
+                <input type="text" name="writtenby" required/>
+            </div>
+            <div>
+                <button className="my-button">Submit</button>
+            </div>
+          </form>
+      </header>
+  
+      <ul>
+        {{#each tasks}}
+          {{> task}}
+        {{/each}}
+      </ul>
+    </div>
+  </body>
